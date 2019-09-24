@@ -7,10 +7,10 @@ public class TestAgnosticHook
 {
     static TestAgnosticHook()
     {
-        ProjectFileHookManager.HookAgnostic(AgnosticHookHandler);
+        ProjectFileHookManager.HookAgnostic(HookHandler);
     }
 
-    private static string AgnosticHookHandler(string fileName, string fileContent)
+    private static string HookHandler(string fileName, string fileContent)
     {
         Debug.Log($"Agnostic Hook\nFileName: {fileName}\nContent: {fileContent}");
         return fileContent;
